@@ -98,12 +98,15 @@ p {
 	text-align: right;
 	margin-bottom: 2%;
 	}
-ul.hasDropdown > li, ul.hasDropdown:before, ul.hasDropdown:after > li {
+ul.hasDropdown {
+	flex-direction:column;
+	}
+ul.hasDropdown, ul.hasDropdown:before, ul.hasDropdown:after {
 	visibility:hidden;
 	float:bottom;
 	
 	}
-ul.hasDropdown:hover > li {
+ul.hasDropdown:hover {
 	visibility:visible;
 	float:bottom;
 	
