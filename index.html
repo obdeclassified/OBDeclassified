@@ -98,7 +98,16 @@ p {
 	text-align: right;
 	margin-bottom: 2%;
 	}
-
+ul#hasDropdown > li {
+	visibility:hidden;
+	float:bottom;
+	
+	}
+ul#hasDropdown:hover > li {
+	visibility:visible;
+	float:bottom;
+	
+	}
 </style>
 </head>
 
@@ -114,12 +123,11 @@ p {
 	<li><a href="#">Elementary School</a></li>
 	<li><a href="#">Middle School</a></li>
 	<li><a href="#">High School</a>
-		<ul>
-			
-	<li><a href="#">Freshmen</a></li>
-	<li><a href="#">Sophomores</a></li>
-	<li><a href="#">Juniors</a></li>
-	<li><a href="#">Seniors</a></li>
+		<ul class="hasDropdown">	
+			<li><a href="#">Freshmen</a></li>
+			<li><a href="#">Sophomores</a></li>
+			<li><a href="#">Juniors</a></li>
+			<li><a href="#">Seniors</a></li>
 		</ul>
 	</li>
 
