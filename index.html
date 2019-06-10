@@ -71,7 +71,7 @@ body {
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
-	background-color: rgb(255,255,255);
+	background-color: rgb(68,114,196);
 	}
 .banner {
 	margin: 0px auto;
@@ -100,16 +100,18 @@ p {
 	text-align: right;
 	margin-bottom: 2%;
 	}
-li.hasDropdown > ul, li.hasDropdown:before > ul, li.hasDropdown:after > ul {
+
+ul.isDropdown, ul.isDropdown:before, ul.isDropdown:after {
 	flex-direction:column;
 	display:none !important; 
-	visibility:hidden;
+	visibility:hidden !important;
 	
 	}
-li.hasDropdown:hover > ul {
+li.hasDropdown:hover > ul.isDropdown{
 	flex-direction:column;
 	display:flex !important;
-	visibility:visible;
+	visibility:visible !important;
+  border:
 	
 	}
 </style>
