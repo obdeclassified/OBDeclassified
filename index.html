@@ -100,16 +100,14 @@ p {
 	}
 li.hasDropdown > ul, li.hasDropdown:before > ul, li.hasDropdown:after > ul {
 	flex-direction:column;
-	display:none;
-	
-	}
-li.hasDropdown > ul > li, li.hasDropdown:before > ul > li, li.hasDropdown:after > ul > li {
-	display:none;
+	display:none !important; 
+	visibility:hidden;
 	
 	}
 li.hasDropdown:hover > ul {
 	flex-direction:column;
-	display:flex;
+	display:flex !important;
+	visibility:visible;
 	
 	}
 </style>
