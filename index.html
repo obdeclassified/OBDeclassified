@@ -98,15 +98,14 @@ p {
 	text-align: right;
 	margin-bottom: 2%;
 	}
-li.hasDropdown > ul {
-	flex-direction:column;
-	}
 li.hasDropdown > ul, li.hasDropdown:before > ul, li.hasDropdown:after > ul {
-	visibility:hidden;
+	flex-direction:column;
+	display:none;
 	
 	}
 li.hasDropdown:hover > ul {
-	visibility:visible;
+	flex-direction:column;
+	display:flex;
 	
 	}
 </style>
