@@ -98,15 +98,15 @@ p {
 	text-align: right;
 	margin-bottom: 2%;
 	}
-ul.hasDropdown {
+li.hasDropdown > ul {
 	flex-direction:column;
 	}
-ul.hasDropdown, ul.hasDropdown:before, ul.hasDropdown:after {
+li.hasDropdown > ul, li.hasDropdown:before > ul, li.hasDropdown:after > ul {
 	visibility:hidden;
 	float:bottom;
 	
 	}
-ul.hasDropdown:hover {
+li.hasDropdown:hover > ul {
 	visibility:visible;
 	float:bottom;
 	
