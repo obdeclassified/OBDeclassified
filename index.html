@@ -126,17 +126,23 @@
             function swapContent(toWhat) {
                 if(toWhat === 0) {
                     $("li#elementary").toggleClass("selected", true);
+                    $("li#middle").toggleClass("selected", false);
+                    $("li#high").toggleClass("selected", false);
                     
                     $("div.elementary").toggle(true);
                     $("div.middle").toggle(false);
                     $("div.high").toggle(false);
                 } else if(toWhat === 1) {
+                    $("li#elementary").toggleClass("selected", false);
                     $("li#middle").toggleClass("selected", true);
+                    $("li#high").toggleClass("selected", false);
                     
                     $("div.elementary").toggle(false);
                     $("div.middle").toggle(true);
                     $("div.high").toggle(false);
                 } else if(toWhat === 2) {
+                    $("li#elementary").toggleClass("selected", false);
+                    $("li#middle").toggleClass("selected", false);
                     $("li#high").toggleClass("selected", true);
                     
                     $("div.elementary").toggle(false);
