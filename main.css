@@ -32,7 +32,7 @@ top a {
 nav {
     background: #fff;
     width:100%;
-    height:5%;
+    height:calc(100%-3em);
 }
 nav > ul {
     padding:0;
@@ -51,7 +51,7 @@ nav > ul > li {
     margin:0;
     flex:1 1 auto;
     text-align:center;
-    height:3.86em;
+    height:3em;
 }
 nav > ul > li > a {
     display:inline;
@@ -77,18 +77,18 @@ nav > ul > li.selected > a > p {
 }
 
 footer {
-    padding:5%;
+    padding:0;
     position:fixed;
     bottom:0;
     padding:0;
     margin:0;
     width:100%;
-    height:5%;
+    height:calc(100%-2em);
     background: url(https://www.oldbridgeadmin.org/cms/lib/NJ02201158/Centricity/Template/9/gb-noise-texture.png) rgb(104, 101, 107);
     font-size:1em;
 }
 footer p {
-    margin:0.8%;
+    margin:0.2em;
     color:white;
 
 }
