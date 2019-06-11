@@ -98,9 +98,12 @@ footer a {
     
 }
 
+.carousel {
+    margin-top:25px;
+}
+
 .carouselSlide {
-    margin-left:2.5%;
-    margin-right:2.5%;
+    margin-left:10px;
 }
 
 .carouselSlide img {
@@ -120,3 +123,6 @@ button.slick-prev {
     top: calc(calc(100% - 2em) / 2);
 }
 
+.description {
+    padding:0.5em;
+}
