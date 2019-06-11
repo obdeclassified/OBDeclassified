@@ -1,3 +1,0 @@
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^(.*)\.obdeclassified\.ga
-RewriteRule ^(.*)$ http://obdeclassified.ga/%1/$1 [L,NC,QSA]
