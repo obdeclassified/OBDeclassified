@@ -101,3 +101,9 @@ footer a {
 .carousel img {
     max-height:400px;
 }
+
+button.slick-next {
+    z-index:20;
+    position:absolute;
+    right:5%;
+}
