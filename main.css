@@ -98,12 +98,20 @@ footer a {
     
 }
 
-.carousel img {
+.carouselSlide img {
     max-height:400px;
 }
-
 button.slick-next {
-    z-index:20;
-    position:absolute;
-    right:5%;
+    z-index: 20;
+    position: absolute;
+    right: 5%;
+    top: calc(calc(100% - 2em) / 2);
 }
+
+button.slick-prev {
+    z-index: 20;
+    position: absolute;
+    left: 5%;
+    top: calc(calc(100% - 2em) / 2);
+}
+
