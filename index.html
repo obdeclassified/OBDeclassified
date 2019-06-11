@@ -9,6 +9,8 @@
         <link rel="icon" type="image/png" href="./icon.png" /></title>
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     </head>
     <body>
         <top>
@@ -24,8 +26,8 @@
         <nav>
             <ul class="group" id="navul">
                 <li><a href="?elementary"><p>Elementary</p></a></li>
-                <li><a href=""><p>Middle</p></a></li>
-                <li><a href="./high.html"><p>High</p></a></li>
+                <li><a href="?middle"><p>Middle</p></a></li>
+                <li><a href="?high"><p>High</p></a></li>
             </ul>
         </nav>
 
@@ -33,5 +35,16 @@
         <footer>
             <p>Contact us at <a href="mailto:obdeclassified@gmail.com">obdeclassified@gmail.com</a></p>
         </footer>
+        
+        <script>
+            setTimeout(() => {
+                if(window.location.search==="elementary") {
+                    $("div.elementary").toggle();
+                } else if(window.location.search==="middle") {
+                    $("div.middle").toggle();
+                } else if(window.location.search==="high") {
+                    $("div.high").toggle();
+                }
+        </script>
     </body>
 </html>
