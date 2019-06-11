@@ -25,9 +25,9 @@
         </top>
         <nav>
             <ul class="group" id="navul">
-                <li><a href="" onclick="(e) => {swapContent(0);e.preventDefault();}"><p>Elementary</p></a></li>
-                <li><a href="" onclick="(e) => {swapContent(1);e.preventDefault();}"><p>Middle</p></a></li>
-                <li><a href="" onclick="(e) => {swapContent(2);e.preventDefault();}"><p>High</p></a></li>
+                <li id="elementary"><a href=""><p>Elementary</p></a></li>
+                <li id="middle"><a href=""><p>Middle</p></a></li>
+                <li id="high"><a href=""><p>High</p></a></li>
             </ul>
         </nav>
         
@@ -43,6 +43,19 @@
         </footer>
         
         <script>
+            $("nav>ul>li#elementary>a").click(event => {
+                event.preventDefault();
+                swapContent(0);
+            });
+            $("nav>ul>li#middle>a").click(event => {
+                event.preventDefault();
+                swapContent(1);
+            });
+            $("nav>ul>li#high>a").click(event => {
+                event.preventDefault();
+                swapContent(2);
+            });
+            
             function swapContent(toWhat) {
                 if(toWhat === 0) {
                     $("li#elementary").toggleClass("selected", true);
