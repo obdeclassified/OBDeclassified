@@ -97,3 +97,7 @@ footer a {
     color:white;
     
 }
+
+.carousel img {
+    max-height:400px;
+}
