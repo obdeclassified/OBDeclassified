@@ -99,11 +99,11 @@ footer a {
 }
 
 .carousel {
-    margin-top:25px;
+    margin-top:5%;
 }
 
 .carouselSlide {
-    margin-left:10px;
+    margin-left:calc(100% - 10px);
 }
 
 .carouselSlide img {
