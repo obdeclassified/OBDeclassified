@@ -25,9 +25,9 @@
         </top>
         <nav>
             <ul class="group" id="navul">
-                <li><a href="?elementary"><p>Elementary</p></a></li>
-                <li><a href="?middle"><p>Middle</p></a></li>
-                <li><a href="?high"><p>High</p></a></li>
+                <li><a href="" onclick="swapContent(0)"><p>Elementary</p></a></li>
+                <li><a href="" onclick="swapContent(1)"><p>Middle</p></a></li>
+                <li><a href="" onclick="swapContent(2)"><p>High</p></a></li>
             </ul>
         </nav>
         
@@ -43,21 +43,27 @@
         </footer>
         
         <script>
-            setTimeout(() => {
-                if(window.location.search==="elementary") {
+            function swapContent(toWhat) {
+                if(toWhat === 0) {
+                    $("li#elementary").toggleClass("selected", true);
+                    
                     $("div.elementary").toggle(true);
                     $("div.middle").toggle(false);
                     $("div.high").toggle(false);
-                } else if(window.location.search==="middle") {
+                } else if(toWhat === 1) {
+                    $("li#middle").toggleClass("selected", true);
+                    
                     $("div.elementary").toggle(false);
                     $("div.middle").toggle(true);
                     $("div.high").toggle(false);
-                } else if(window.location.search==="high") {
+                } else if(toWhat === 2) {
+                    $("li#high").toggleClass("selected", true);
+                    
                     $("div.elementary").toggle(false);
                     $("div.middle").toggle(false);
                     $("div.high").toggle(true);
                 }
-            }, 10)
+            }
         </script>
     </body>
 </html>
