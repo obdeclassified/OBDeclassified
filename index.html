@@ -39,11 +39,17 @@
         <script>
             setTimeout(() => {
                 if(window.location.search==="elementary") {
-                    $("div.elementary").toggle();
+                    $("div.elementary").toggle(true);
+                    $("div.middle").toggle(false);
+                    $("div.high").toggle(false);
                 } else if(window.location.search==="middle") {
-                    $("div.middle").toggle();
+                    $("div.elementary").toggle(false);
+                    $("div.middle").toggle(true);
+                    $("div.high").toggle(false);
                 } else if(window.location.search==="high") {
-                    $("div.high").toggle();
+                    $("div.elementary").toggle(false);
+                    $("div.middle").toggle(false);
+                    $("div.high").toggle(true);
                 }
             }, 10)
         </script>
