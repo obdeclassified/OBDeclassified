@@ -85,7 +85,7 @@ footer {
     width:100%;
     height:calc(100%-2em);
     background: url(https://www.oldbridgeadmin.org/cms/lib/NJ02201158/Centricity/Template/9/gb-noise-texture.png) rgb(104, 101, 107);
-    font-size:1em;
+    font-size:2em;
 }
 footer p {
     margin:0.2em;
