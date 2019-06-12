@@ -127,7 +127,15 @@
             });
             
             function swapContent(toWhat) {
-                if(toWhat === 0) {
+                if(toWhat === -1) {
+                    $("li#elementary").toggleClass("selected", false);
+                    $("li#middle").toggleClass("selected", false);
+                    $("li#high").toggleClass("selected", false);
+                    
+                    $("div.elementary").toggle(false);
+                    $("div.middle").toggle(false);
+                    $("div.high").toggle(false);
+                } else if(toWhat === 0) {
                     $("li#elementary").toggleClass("selected", true);
                     $("li#middle").toggleClass("selected", false);
                     $("li#high").toggleClass("selected", false);
@@ -155,7 +163,7 @@
             }
             
             $(document).ready(() => {
-                swapContent(0);
+                swapContent(-1);
                  $('div.elementary>div.carousel').slick({
                   centerMode: true,
                   variableWidth: true,
