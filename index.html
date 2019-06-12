@@ -4,13 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>OB: Declassified</title>
         <meta name="google-site-verification" content="L3kT_UsyFy5-FDJ15r5ty-8qdMlNJzULkZzNe3n7nLU" />
-        <link rel="icon" type="image/png" href="./icon.png" />
+        <title>OB: Declassified</title>
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="js/load-image.all.min.js"></script>
+        <link rel="icon" type="image/png" href="./icon.png" />
         <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" rel="stylesheet"/>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.0/slick-theme.css" rel="stylesheet"/>
 
@@ -74,11 +75,11 @@
                         <p class="description">Students get an inside look at the Auto shop while high school kids work on cars.</p>
                     </div>
                     <div class="carouselSlide" id="slide11">
-                        <img src="media/elementary/slide11.jpg" style="transform: rotate(90deg);" />
+                        <img src="media/elementary/slide11.jpg" />
                         <p class="description">In AP Biology, kids got to see chicks!</p>
                     </div>
                     <div class="carouselSlide" id="slide12">
-                        <img src="media/elementary/slide12.jpg" style="transform: rotate(90deg);" />
+                        <img src="media/elementary/slide12.jpg" />
                         <p class="description">Dean Chumash explains how he edits his TV projects.</p>
                     </div>
                     <div class="carouselSlide" id="slide13">
@@ -169,6 +170,9 @@
                   variableWidth: true,
                   centerPadding: '20%',
                   slidesToShow: 5,
+                  slidesToScroll: 1,
+                  autoplay: true,
+                  autoplaySpeed: 3000,
                   responsive: [
                     {
                       breakpoint: 768,
@@ -190,6 +194,23 @@
                     }
                   ]
                 });
+            });
+
+            $.each($('.carouselSlide img'), function( index, value ) {
+                loadImage(
+                    $(value).attr('src'),
+                    function (img, data) {
+                        if(img.type === "error") {
+                            console.error("Error loading image " + $(value).attr('src'));
+                        } else {
+                            $(value).attr('src', img.src);
+                            console.log("Success loading image " + img.src);
+                        }
+                    },
+                    {
+                        orientation: 1
+                    }
+                )
             });
         </script>
     </body>
