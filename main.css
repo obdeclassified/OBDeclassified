@@ -103,10 +103,12 @@ footer a {
 }
 
 .carouselSlide {
+    display:inline;
     margin-left:10px;
 }
 
 .carouselSlide img {
+    display:block;
     max-height:400px;
 }
 button.slick-next {
