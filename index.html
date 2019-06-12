@@ -8,7 +8,7 @@
         <title>OB: Declassified</title>
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script src="js/loadimage.js"></script>
+        <!-- <script src="js/loadimage.js"></script> -->
         <link rel="icon" type="image/png" href="./icon.png" />
         <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -195,7 +195,7 @@
                 });
                 
 
-                $.each($('.carouselSlide img'), function( index, value ) {
+                /* $.each($('.carouselSlide img'), function( index, value ) {
                     loadImage(
                         $(value).attr('src'),
                         function (img, data) {
@@ -207,10 +207,12 @@
                             }
                         },
                         {
-                            orientation: 3
+                            orientation: 1,
+                            maxHeight: 400,
+                            canvas: true,
                         }
                     )
-                });
+                }); */
             });
         </script>
     </body>
