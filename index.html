@@ -8,7 +8,7 @@
         <title>OB: Declassified</title>
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script src="js/load-image.all.min.js"></script>
+        <script src="js/loadimage.js"></script>
         <link rel="icon" type="image/png" href="./icon.png" />
         <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -114,19 +114,6 @@
         </footer>
         
         <script>
-            $("nav>ul>li#elementary>a").click(event => {
-                event.preventDefault();
-                swapContent(0);
-            });
-            $("nav>ul>li#middle>a").click(event => {
-                event.preventDefault();
-                swapContent(1);
-            });
-            $("nav>ul>li#high>a").click(event => {
-                event.preventDefault();
-                swapContent(2);
-            });
-            
             function swapContent(toWhat) {
                 if(toWhat === -1) {
                     $("li#elementary").toggleClass("selected", false);
@@ -162,55 +149,68 @@
                     $("div.high").toggle(true);
                 }
             }
-            
+
             $(document).ready(() => {
+                $("nav>ul>li#elementary>a").click(event => {
+                    event.preventDefault();
+                    swapContent(0);
+                });
+                $("nav>ul>li#middle>a").click(event => {
+                    event.preventDefault();
+                    swapContent(1);
+                });
+                $("nav>ul>li#high>a").click(event => {
+                    event.preventDefault();
+                    swapContent(2);
+                });
                 swapContent(-1);
-                 $('div.elementary>div.carousel').slick({
-                  centerMode: true,
-                  variableWidth: true,
-                  centerPadding: '20%',
-                  slidesToShow: 5,
-                  slidesToScroll: 1,
-                  autoplay: true,
-                  autoplaySpeed: 3000,
-                  responsive: [
+                    $('div.elementary>div.carousel').slick({
+                    centerMode: true,
+                    variableWidth: true,
+                    centerPadding: '20%',
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                    responsive: [
                     {
-                      breakpoint: 768,
-                      settings: {
+                        breakpoint: 768,
+                        settings: {
                         arrows: false,
                         centerMode: true,
                         centerPadding: '10%',
                         slidesToShow: 3
-                      }
+                        }
                     },
                     {
-                      breakpoint: 480,
-                      settings: {
+                        breakpoint: 480,
+                        settings: {
                         arrows: false,
                         centerMode: true,
                         centerPadding: '10%',
                         slidesToShow: 1
-                      }
-                    }
-                  ]
-                });
-            });
-
-            $.each($('.carouselSlide img'), function( index, value ) {
-                loadImage(
-                    $(value).attr('src'),
-                    function (img, data) {
-                        if(img.type === "error") {
-                            console.error("Error loading image " + $(value).attr('src'));
-                        } else {
-                            $(value).attr('src', img.src);
-                            console.log("Success loading image " + img.src);
                         }
-                    },
-                    {
-                        orientation: 1
                     }
-                )
+                    ]
+                });
+                
+
+                $.each($('.carouselSlide img'), function( index, value ) {
+                    loadImage(
+                        $(value).attr('src'),
+                        function (img, data) {
+                            if(img.type === "error") {
+                                console.error("Error loading image " + $(value).attr('src'));
+                            } else {
+                                $(value).attr('src', img.src);
+                                console.log("Success loading image " + img.src);
+                            }
+                        },
+                        {
+                            orientation: 1
+                        }
+                    )
+                });
             });
         </script>
     </body>
