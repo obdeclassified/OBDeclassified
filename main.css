@@ -126,14 +126,9 @@ button.slick-prev {
 }
 
 .description {
-    display:inline-block;
-    padding: 0.5em;
+    padding: 10px;
+    margin: 0 auto;
+    line-height: 1.5;
     word-break: break-word;
     hyphens: auto;
-}
-
-img[src*="slide11"], img[src*="slide12"] {
-    width:400px;
-    max-height:unset;
-    height:auto;
 }
