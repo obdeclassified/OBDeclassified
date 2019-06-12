@@ -109,7 +109,9 @@ footer a {
 
 .carouselSlide img {
     display: block;
-    max-height: calc(100% - 2em);
+    width:auto;
+    height: 400px;
+    max-height: 400px;
 }
 button.slick-next {
     z-index: 20;
